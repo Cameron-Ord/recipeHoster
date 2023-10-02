@@ -1,6 +1,9 @@
 <template>
   <main>
     <section>
+      <admin-login></admin-login>
+    </section>
+    <section>
       <recipe-uploader></recipe-uploader>
     </section>
     <section>
@@ -10,13 +13,14 @@
 </template>
 
 <script>
+import AdminLogin from '../components/AdminLogin.vue';
 import InstructionsUploader from '../components/InstructionsUploader.vue'
 import RecipeUploader from '../components/RecipeUploader.vue'
 export default {
   components: {
     RecipeUploader,
     InstructionsUploader,
-    
+    AdminLogin
   }
 }
 </script>

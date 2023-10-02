@@ -35,11 +35,10 @@ export default {
         url: `${import.meta.env.VITE_APP_BASE_DOMAIN}/api/getRecipeId`,
         method: 'GET',
         params: {
-          name: name.value
+          name: name.value.toLowerCase()
         }
       })
         .then((response) => {
-          console.log(response['data'][0]['id'])
           this.response = response['data'][0]['id']
         })
         .catch((error) => {
