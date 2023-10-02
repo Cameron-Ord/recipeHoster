@@ -72,7 +72,26 @@ import axios from 'axios'
 </script>
 
 <style lang="scss" scoped>
+.AdminLogin{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-auto-flow: row;
+    row-gap: 25px;
 
+    >.passwordInput{
+        display: grid;
+        >input{
+            padding: 10px;
+        }
+    }
+    >.usernameInput{
+        display: grid;
+        >input{
+            padding: 10px;
+        }
+    }
+}
 </style>
 
 

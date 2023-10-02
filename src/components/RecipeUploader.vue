@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="RecipeUploader">
+    <h3>Recipes</h3>
     <input placeholder="name" class="title" ref="title" type="text" />
     <input placeholder="desc" class="desc" ref="desc" type="text" />
     <input placeholder="ingredients" class="ingredient" ref="ingredients" type="text" />
@@ -83,4 +84,20 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.RecipeUploader{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-auto-flow: row;
+  row-gap: 25px;
+
+  >p{
+    padding: 5px;
+    cursor: pointer;
+  }
+  >input{
+    padding: 10px;
+  }
+}
+</style>

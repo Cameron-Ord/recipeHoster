@@ -1,5 +1,7 @@
 /* color palette from <https://github.com/vuejs/theme> */
 body {
+  padding: 0px;
+  margin: 0px;
   min-height: 100vh;
   color: var(--color-text);
   background: var(--color-background);
@@ -24,4 +26,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p,h1,h2,h3,h4,img,a, input{
+margin: 0px;
+padding: 0px;
 }

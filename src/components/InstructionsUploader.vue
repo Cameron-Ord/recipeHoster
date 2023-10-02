@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div class="Instructions">
+    <h3>Instructions</h3>
     <input ref="name" placeholder="name.." type="text" /><input
       ref="prep"
       placeholder="prep.."
@@ -21,7 +22,7 @@
 
 <script>
 import axios from 'axios'
-
+import Cookies from 'vue-cookies';
 export default {
   components: {},
 
@@ -49,6 +50,7 @@ export default {
     },
     submitInstructions(name, prep, cook, method) {
       const Id = this.getIdFromName(name)
+      const adminCreds = Cookies.get('adminInfo');
       console.log(Id, name.value, cook.value, method.value)
       axios({
         url: `${import.meta.env.VITE_APP_BASE_DOMAIN}/api/createInstructions`,
@@ -57,7 +59,9 @@ export default {
           recipeId: Id,
           recipeprep: prep.value,
           cooking: cook.value,
-          methods: method.value
+          methods: method.value,
+          token: adminCreds['session_token'],
+          admin_id: adminCreds['admin_id']
         }
       })
         .then((response) => {
@@ -79,4 +83,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.Instructions{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-auto-flow: row;
+  row-gap: 25px;
+  >input{
+    padding: 10px;
+  }
+}
+</style>
