@@ -1,1 +1,26 @@
 @import './base.css';
+:root {
+    --green0: #4ad66d;
+    --green1: #70e000;
+    --black0: #000000;
+    --black1: #212529;
+    --white0: #fdfffc;
+    --darkestgrey:#121416;
+    --grey0: #6c757d;
+    --grey1: #adb5bd;
+    --grey2: #343a40
+  }
+body{
+ background-color: var(--black0);
+}
+
+.submitTag{
+    color: var(--green0);
+    background-color: var(--darkestgrey);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+input{
+    border-color: var(--green0);
+}

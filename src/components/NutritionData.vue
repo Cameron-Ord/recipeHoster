@@ -3,16 +3,16 @@
     <span class="nutritionInputs">
         <h3>Nutrition</h3>
         <div class="inputDiv">
-            <input type="text" ref="name">
-            <input type="text" ref="protein">
-            <input type="text" ref="fat">
-            <input type="text" ref="carbs">
-            <input type="text" ref="calories">
-            <input type="text" ref="saturatedFat">
-            <input type="text" ref="sugar">
-            <input type="text" ref="salt">
+            <input placeholder="name" type="text" ref="name">
+            <input placeholder="protein" type="text" ref="protein">
+            <input placeholder="fat" type="text" ref="fat">
+            <input placeholder="carbs" type="text" ref="carbs">
+            <input placeholder="calories" type="text" ref="calories">
+            <input placeholder="saturatedfat" type="text" ref="saturatedFat">
+            <input placeholder="sugar" type="text" ref="sugar">
+            <input placeholder="salt" type="text" ref="salt">
         </div>
-        <p @click="submitNutrition">Submit</p>
+        <p @click="submitNutrition" class="submitTag">Submit</p>
     </span>
 </template>
 

@@ -10,12 +10,13 @@
       placeholder="methods.."
       type="text"
     />
-    <p
+    <p 
+      class="submitTag"
       @click="
         submitInstructions(this.$refs.name, this.$refs.prep, this.$refs.cook, this.$refs.method)
       "
     >
-      submit
+      Submit
     </p>
   </div>
 </template>

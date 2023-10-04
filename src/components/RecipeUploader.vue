@@ -7,7 +7,7 @@
     <input placeholder="cuisine" class="cuisine" ref="cuisine" type="text" />
     <input class="isHealthy" ref="isHealthy" type="checkbox" />
     <input class="image" ref="image" type="file" />
-    <p @click="sendRecipe">Submit</p>
+    <p @click="sendRecipe" class="submitTag">Submit</p>
   </div>
 </template>
 
@@ -93,7 +93,7 @@ export default {
   row-gap: 25px;
 
   >p{
-    padding: 5px;
+
     cursor: pointer;
   }
   >input{

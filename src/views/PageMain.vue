@@ -35,8 +35,7 @@ export default {
   min-height: 100vh;
   display: grid;
   align-items: center;
-  grid-auto-flow: row;
-  row-gap: 25px;
+  grid-template-columns:1fr 1fr 1fr 1fr;
   
   >.NutritionalDataUpload{
     display: grid;
